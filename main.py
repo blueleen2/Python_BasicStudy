@@ -168,6 +168,7 @@ def exam_1():
 
 def if_study():
     print("if문 시작")
+    print("test")
 
 
 if __name__ == '__main__':
