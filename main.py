@@ -168,8 +168,33 @@ def exam_1():
 
 def if_study():
     print("if문 시작")
-    print("test")
+    weather = input("오늘 날씨는 어때요? ")
+    if weather == "비" or weather == "눈":
+        print("우산을 챙기세요")
+    elif weather == "미세먼지":
+        print("마스크를 챙기세요")
+    else:
+        print("준비없이 나가도 돼요")
 
+    temp  = int(input("기온은 어때요? "))
+    if 30 <= temp:
+        print("너무 더워요. 나가지 마세요")
+    elif 10<= temp and temp <30:
+        print("괜찮은 날씨에요")
+    elif 0<=temp and temp <10:
+        print("외투를 챙기세요")
+    else:
+        print("너무 추워요. 나가지 마세요")
+
+def for_study():
+    print("for구문 시작")
+    print("대기번호 : 1")
+    print("대기번호 : 2")
+    print("대기번호 : 3")
+    print("대기번호 : 4")
+
+    for waiting_num in [1,2,3,4,5]:
+        print("대기번호 : {0}".format(waiting_num))
 
 if __name__ == '__main__':
    from random import *
@@ -181,5 +206,6 @@ if __name__ == '__main__':
    #set_study()
    # struct_cast()
    #exam_1()
-   if_study()
+   #if_study()
+   for_study()
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
