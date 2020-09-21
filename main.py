@@ -187,14 +187,49 @@ def if_study():
         print("너무 추워요. 나가지 마세요")
 
 def for_study():
-    print("for구문 시작")
-    print("대기번호 : 1")
-    print("대기번호 : 2")
-    print("대기번호 : 3")
-    print("대기번호 : 4")
+    # print("for구문 시작")
+    # print("대기번호 : 1")
+    # print("대기번호 : 2")
+    # print("대기번호 : 3")
+    # print("대기번호 : 4")
 
     for waiting_num in [1,2,3,4,5]:
         print("대기번호 : {0}".format(waiting_num))
+
+    for waiting_num in range(5):
+        print("대기번호 : {0}".format(waiting_num))
+
+    starbucks = ["아이언맨", "토르", "아이엠그루트"]
+    for customer in starbucks:
+        print("{0}, 커피가 준비되었습니다.".format(customer))
+
+def while_study():
+    print("while문 스터디 시작")
+    customer = "토르"
+    index = 5
+    while index>=1:
+        print("{0}, 커피가 준비 되었습니다. {1} 번 남았어요".format(customer,index))
+        index -= 1
+        if index == 0:
+            print("커피는 폐기처분되었습니다.")
+
+    customer ="아이언맨"
+    index = 1
+    while True:
+        print("{0}, 커피가 준비 되었습니다. 호출 {1}".format(customer,index))
+        index +=1
+        if index >= 100000:
+            break
+
+    customer = "토르"
+    person = "Unknown"
+
+    while person != customer:
+        print("{0}, 커피가 준비 되었습니다.".format(customer))
+        person =input("이름이 어떻게 되세요 ? ")
+
+def continue_break():
+    print("continue%break 스터디 시작")
 
 if __name__ == '__main__':
    from random import *
@@ -207,5 +242,7 @@ if __name__ == '__main__':
    # struct_cast()
    #exam_1()
    #if_study()
-   for_study()
+   #for_study()
+   #while_study()
+   continue_break()
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
