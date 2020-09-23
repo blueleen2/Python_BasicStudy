@@ -230,6 +230,49 @@ def while_study():
 
 def continue_break():
     print("continue%break 스터디 시작")
+    absent = [2,5]
+    no_book = [7]
+    for student in range(1,11):
+        if student in absent:
+            continue
+        elif student in no_book:
+            print("오늘 수업 여기까지. {0}는 교무실로 따라와".format(student))
+            break
+        print("{0}, 책을 읽어봐".format(student))
+
+    students =[1,2,3,4,5]
+    print(students)
+    students = [i+100 for i in students]
+    print(students)
+
+    students = ["Iron man", "Thor", "I am groot"]
+    #students = [len(i) for i in students]
+    #print(students)
+
+    students = [i.upper() for i in students]
+    print(students)
+
+def exam_5():
+   import random
+
+   print("exam 5 시작")
+   customer =[]
+   for i in range(50):
+       customer.append(0)
+
+   for i in range(0,50):
+       customer[i] = random.randint(5,51)
+
+   count = 0
+   for i in range(0,50):  
+
+    if(customer[i] >= 5 and customer[i] <= 15):
+       count +=1
+       print("[0] {0}번째 손님 (소요시간 : {1}분)".format(i + 1, customer[i]))
+    else:
+       print("[] {0}번째 손님 (소요시간 : {1}분)".format(i + 1, customer[i]))
+
+   print("총 탑승 승객 : {0} 분".format(count))
 
 if __name__ == '__main__':
    from random import *
@@ -244,5 +287,6 @@ if __name__ == '__main__':
    #if_study()
    #for_study()
    #while_study()
-   continue_break()
+   #continue_break()
+   exam_5()
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
